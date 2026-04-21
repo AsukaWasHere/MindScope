@@ -1,0 +1,62 @@
+# ─────────────────────────────
+# Python
+# ─────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment variables
+.env*
+
+# Notebooks
+.ipynb_checkpoints/
+
+# ─────────────────────────────
+# DATA & MODELS (CRITICAL)
+# ─────────────────────────────
+data/
+models/
+
+# ─────────────────────────────
+# REPORTS / OUTPUTS
+# ─────────────────────────────
+reports/
+
+# ─────────────────────────────
+# FILE TYPES
+# ─────────────────────────────
+*.pkl
+*.pt
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.csv
+
+# ─────────────────────────────
+# IDE / OS
+# ─────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────
+# LOGS
+# ─────────────────────────────
+*.log
+logs/
+
+# spaCy
+en_core_web_sm/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/

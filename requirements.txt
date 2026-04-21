@@ -1,0 +1,41 @@
+# MindScope — Python dependencies
+# Install with: pip install -r requirements.txt
+# Then run:     python -m spacy download en_core_web_sm
+
+# ── Core data ──────────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ── NLP preprocessing ──────────────────────────────────────────────────────
+nltk>=3.8.1
+spacy>=3.7.0
+# After install, run: python -m spacy download en_core_web_sm
+
+# ── Machine learning ───────────────────────────────────────────────────────
+scikit-learn>=1.3.0
+lightgbm>=4.0.0
+
+# ── Transformer embeddings (optional — needed for embedder.py) ─────────────
+sentence-transformers>=2.2.2
+torch>=2.0.0                    # Required by sentence-transformers
+
+# ── Sentiment analysis (optional — needed for eda.py) ─────────────────────
+vaderSentiment>=3.3.2
+
+# ── Visualization ──────────────────────────────────────────────────────────
+matplotlib>=3.7.0
+seaborn>=0.12.0
+wordcloud>=1.9.0
+
+# ── API deployment (optional) ─────────────────────────────────────────────
+fastapi>=0.100.0
+uvicorn>=0.23.0
+
+# ── Dashboard ──────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+plotly>=5.20.0
+
+# ── ✨ NEW — Transformer / BERT fine-tuning ───────────────────────────
+torch>=2.0.0                   # PyTorch (CPU or CUDA)
+transformers>=4.38.0           # HuggingFace Transformers
+accelerate>=0.27.0             # Optional: speeds up HuggingFace training
