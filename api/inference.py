@@ -16,7 +16,10 @@ This module does NOT load models (model_loader.py does that).
 This module does NOT define API routes (app.py does that).
 """
 
-import torch
+try:
+    import torch
+except ImportError:
+    torch = None
 import numpy as np
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
@@ -119,6 +122,7 @@ def _predict_classical(clean_text: str, registry: dict, label_encoder) -> tuple:
 
 
 def _predict_bert(raw_text: str, registry: dict, label_encoder) -> tuple:
+    import torch
     """BERT tokenization → HuggingFace forward pass → softmax probabilities."""
     tokenizer = registry["tokenizer"]
     model     = registry["model"]
