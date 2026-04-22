@@ -18,8 +18,6 @@ Design decisions
 """
 
 import os
-import torch
-from transformers import BertForSequenceClassification, BertTokenizer
 
 from src.utils.config import PATHS, BERT_CONFIG, API_CONFIG, CLASSES
 from src.utils.helpers import load_object, get_label_encoder
@@ -94,6 +92,11 @@ def _load_classical() -> None:
 
 def _load_bert() -> None:
     """Load fine-tuned BERT tokenizer + model weights."""
+
+    # ✅ LAZY IMPORTS (only change)
+    import torch
+    from transformers import BertForSequenceClassification, BertTokenizer
+
     save_dir = BERT_CONFIG["save_dir"]
 
     if not os.path.exists(save_dir):
