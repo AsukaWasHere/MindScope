@@ -18,18 +18,28 @@ env/
 .ipynb_checkpoints/
 
 # ─────────────────────────────
-# DATA & MODELS (CRITICAL)
+# DATA — generated, regenerated on first run
+# (raw source files are in data/raw/ — small, needed for pipeline)
 # ─────────────────────────────
-data/
-models/
+data/processed/
+data/splits/
+data/features/
 
 # ─────────────────────────────
-# REPORTS / OUTPUTS
+# MODELS — ignore non-artifact files, keep trained .pkl files
+# ─────────────────────────────
+models/saved/*.txt
+models/saved/bert/
+models/saved/*.json
+models/saved/*.csv
+
+# ─────────────────────────────
+# REPORTS — generated locally
 # ─────────────────────────────
 reports/
 
 # ─────────────────────────────
-# FILE TYPES
+# FILE TYPES — ignores everything else
 # ─────────────────────────────
 *.pkl
 *.pt

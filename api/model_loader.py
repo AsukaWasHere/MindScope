@@ -31,6 +31,7 @@ _registry: dict = {}
 
 # ══════════════════════════════════════════════════════════════════════
 def load_artifacts() -> None:
+    print("🔥 LOADING ARTIFACTS STARTED")
     """
     Load all model artifacts into the in-memory registry.
     Called once during FastAPI lifespan startup.
